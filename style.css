@@ -1,0 +1,543 @@
+/* ========== 全局样式 ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+               "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #fafafa;
+}
+
+/* ========== header ========== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(153, 236, 153, 0.8);
+  color: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 1000;
+}
+
+/* 左侧 logo */
+.header-left .logo-img {
+  height: 200px;
+  width: auto;
+}
+
+/* 中间导航 */
+.header-center a {
+  margin: 0 15px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* 右侧联系我们 */
+.header-right {
+  position: relative;
+}
+
+.contact-menu span {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* 下拉菜单默认隐藏 */
+.contact-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: #fff;
+  color: #222;
+  padding: 15px;
+  border-radius: 4px;
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: left;
+  z-index: 1000;
+}
+
+.contact-dropdown p {
+  margin: 5px 0;
+}
+
+/* 二维码图片 */
+.contact-dropdown .qr-code {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 10px 0;
+}
+
+/* 鼠标悬停显示下拉 */
+.contact-menu:hover .contact-dropdown {
+  display: block;
+}
+
+/* ========== 页面区块 ========== */
+.section {
+  height: 100vh;
+  padding: 120px 60px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero {
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;       /* 背景图片铺满 */
+  background-position: center;  /* 居中 */
+  position: relative;
+  transition: background-image 1s ease-in-out; /* 轮换动画平滑 */
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6); /* 背景文字可读性 */
+}
+
+.hero-text p {
+  font-size: 18px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* 使首屏文字靠右对齐，同时保留移动端的可读性 */
+.hero-text {
+  text-align: right;
+  margin-left: auto;     /* 在 flex 容器中推到右侧 */
+  max-width: 720px;      /* 防止文字行宽过长 */
+  padding-right: 60px;   /* 与页面右侧保持间距 */
+}
+
+@media (max-width: 720px) {
+  .hero-text {
+    text-align: center;  /* 小屏幕回退为居中对齐 */
+    margin-left: 0;
+    padding: 0 20px;
+    max-width: none;
+  }
+}
+
+
+/* 团队 & 案例 & 车主空间通用样式 */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.content img {
+  max-width: 400px;
+  border-radius: 4px;
+}
+
+/* 案例展示暗色风格 */
+.dark {
+  background: #111;
+  color: #fff;
+}
+
+/* ====== 案例：左右两栏展示（大图左、文字右） ====== */
+.cases-showcase {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+  padding: 20px 4vw;
+}
+
+.showcase-image {
+  flex: 2 1 60%;
+  height: 64vh;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.showcase-info {
+  flex: 1 1 36%;
+  max-width: 420px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.showcase-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.counter {
+  font-size: 14px;
+  color: #999;
+  letter-spacing: 1px;
+}
+
+.nav-arrows { display:flex; gap:10px; }
+.cases-arrow {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.showcase-info h3 { font-size: 28px; margin: 6px 0 12px; }
+.showcase-info p { color: #ddd; line-height: 1.6; }
+
+.btn-dark {
+  display: inline-block;
+  margin-top: 24px;
+  background: #000;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cases-dots { display: none; }
+
+@media (max-width: 900px) {
+  .cases-showcase { flex-direction: column; gap: 18px; padding: 20px; }
+  .showcase-image { width: 100%; height: 44vh; }
+  .showcase-info { max-width: none; padding: 0 12px; }
+  .showcase-info h3 { font-size: 22px; }
+}
+
+
+/* ====== 团队展示样式（海报式五列） ====== */
+#team .section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 18px;
+  color: #fff;
+}
+
+.team-poster-section {
+  position: relative;
+  background: #fff; /* changed to white background */
+  color: #222;
+  padding-bottom: 120px;
+}
+
+.team-poster-wrap {
+  position: relative;
+}
+
+.team-poster-inner {
+  display: flex;
+  gap: 24px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px 40px 40px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.poster-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.poster-nav.prev { left: 12px; }
+.poster-nav.next { right: 12px; }
+
+.poster-card {
+  flex: 0 0 23%;
+  max-width: 23%;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  scroll-snap-align: center;
+  transition: transform 260ms ease, box-shadow 260ms ease;
+}
+
+.poster-card img {
+  width: 100%;
+  height: 72vh; /* 更高的海报视觉 */
+  min-height: 520px;
+  object-fit: cover;
+  object-position: center center; /* 图片居中显示，避免靠上 */
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.48);
+}
+
+.poster-name {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.02;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+.poster-role {
+  display: block;
+  font-size: 13px;
+  color: rgba(255,255,255,0.95);
+  margin-top: 6px;
+  font-weight: 700;
+}
+
+.poster-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 28px 60px rgba(0,0,0,0.5);
+}
+
+.team-poster-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 18px;
+  font-size: 64px;
+  color: #d4af37;
+  font-weight: 900;
+  letter-spacing: 6px;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  pointer-events: none;
+  font-family: "KaiTi", "SimKai", serif;
+}
+
+
+@media (max-width: 1200px) {
+  .poster-card img { height: 54vh; }
+  .team-poster-title { font-size: 48px; }
+}
+
+@media (max-width: 900px) {
+  .team-poster-inner { gap: 12px; padding: 8px 20px 100px; }
+  .poster-card { flex: 0 0 40%; max-width: 40%; }
+  .poster-card img { height: 58vh; min-height: 420px; }
+  .team-poster-title { font-size: 40px; bottom: 14px; }
+}
+
+@media (max-width: 720px) {
+  .team-poster-section { padding-bottom: 120px; }
+  .team-poster-inner { flex-direction: column; align-items: center; overflow-x: visible; }
+  .poster-card { flex: 0 0 82%; max-width: 82%; }
+  .poster-card img { height: 56vh; min-height: 420px; }
+  .poster-name { left: 14px; top: 14px; font-size: 18px; }
+  .team-poster-title { font-size: 36px; bottom: 12px; }
+  .poster-nav { display: none; }
+}
+
+/* 保持后续成员页、标题等原有样式的兼容 */
+#team { padding-top: 40px; justify-content: flex-start; }
+
+
+/* 成员页面：封面式大图 */
+.member-hero {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.member-hero .back-link {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.member-hero .member-info {
+  position: absolute;
+  bottom: 36px;
+  left: 24px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+/* ===== member profile page (two-column) ===== */
+.member-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* 居中整体布局，让信息不太靠右 */
+  align-items: flex-end;   /* 图片底部贴合视口底部 */
+  gap: 32px;
+  padding: 28px 40px 0;    /* 去除底部内边距以靠齐页面底部 */
+  background: linear-gradient(90deg, #e9ecef 0%, #9aa0a6 40%, rgba(0,0,0,0.9) 100%);
+  color: #fff;
+  position: relative;
+}
+
+.member-page .back-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  z-index: 30;
+}
+
+.member-left {
+  flex: 0 0 50%; /* 占据页面一半宽度 */
+  display: flex;
+  align-items: flex-end; /* 图片底部对齐 */
+  justify-content: center;
+}
+
+.profile-photo {
+  width: 100%;       /* 占满左侧 50% 区域宽度 */
+  height: auto;      /* 保持原始纵横比 */
+  max-height: 100vh; /* 不超过视口高度 */
+  object-fit: contain;
+  border-radius: 0;   /* 不要任何边框/圆角（抠图通常已处理） */
+  background: transparent;
+}
+
+/* 在 member 页面里，不要为抠图添加阴影或边框 */
+.member-page .profile-photo {
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+.member-right {
+  width: 380px;      /* 缩窄信息栏使其更靠近页面中心 */
+  flex: 0 0 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: stretch;
+}
+
+.member-name {
+  font-size: 64px;
+  margin: 0 0 8px 0;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 12px 28px rgba(0,0,0,0.7);
+  /* 新字体为首选，回退到系统毛笔/衬线 */
+  font-family: 'ZCOOL XiaoWei', "KaiTi", "SimKai", serif;
+  text-align: right;
+}
+
+.info-card {
+  background: rgba(18,18,18,0.88);
+  border-radius: 12px;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #d3d3d3;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 6px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+.info-row:first-child { border-top: none; }
+
+.info-key { font-size: 18px; color: #bfbfbf; }
+.info-val { font-size: 18px; color: #eaeaea; font-weight: 600; }
+
+.bike-row {
+  margin-top: 10px;
+  background: rgba(255,255,255,0.03);
+  color: #ddd;
+  padding: 18px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 20px;
+}
+
+@media (max-width: 900px) {
+  .member-page { flex-direction: column; padding: 20px; align-items: center; }
+  .member-left { order: 1; width: 100%; flex: 0 0 auto; align-items: center; }
+  .member-right { order: 2; width: 100%; max-width: 720px; }
+  .member-name { text-align: center; font-size: 44px; }
+  .profile-photo { height: auto; max-width: 92%; }
+}
+
+@media (max-width: 720px) {
+  #team { padding-top: 40px; }
+  #team .section-title { margin-left: 20px; }
+  .member-hero .member-info { left: 16px; bottom: 20px; }
+  .member-hero .back-link { top: 12px; left: 12px; }
+}
+
+.owner-story {
+  background: #f2f2f2;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.owner-story p {
+  margin-bottom: 10px;
+}
+
+.owner-story span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ========== footer ========== */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #000;
+  color: #aaa;
+}
