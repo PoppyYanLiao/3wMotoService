@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>三娃儿 Moto Service</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="三娃是位于成都的摩托车维修改装工作室，价格透明，流程规范，关注骑士的真实体验。" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- 开页 -->
+<section id="hero" class="section hero">
+  <div class="hero-text">
+    <h1>欢迎来到<br>成都三娃儿 Moto Service</h1>
+    <p>摩托车维修 · 保养 · 改装工作室</p>
+  </div>
+</section>
+
+
+<!-- 顶部导航 -->
+<header>
+  <!-- 左侧 logo -->
+  <div class="header-left">
+    <a href="#hero">
+      <img src="images/logo.png" alt="三娃儿 MotoService" class="logo-img">
+    </a>
+  </div>
+
+  <!-- 中间导航 -->
+  <nav class="header-center">
+    <a href="#team">团队介绍</a>
+    <a href="#cases">案例展示</a>
+    <a href="#owners">车主空间</a>
+  </nav>
+
+  <!-- 右侧联系我们 -->
+  <div class="header-right">
+    <div class="contact-menu">
+      <span>联系我们 ▼</span>
+      <div class="contact-dropdown">
+        <p>微信公众号：三娃儿MotoService</p>
+        <img src="images/wechat-qrcode.png" alt="微信公众号二维码" class="qr-code">
+        <p>电话：123-456-7890</p>
+        <p>地址：成都市双流区广巍路243号</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<!-- 团队介绍（海报式五列布局） -->
+<section id="team" class="section team-poster-section">
+  <h2 class="section-title">团队介绍</h2>
+
+  <div class="team-poster-wrap">
+    <button class="poster-nav prev" aria-label="上一组">‹</button>
+    <div class="team-poster-inner" id="teamPoster">
+    <a href="team-member1.html" class="poster-card" target="_blank">
+      <div class="poster-name">陈熹微<br><span class="poster-role">外联</span></div>
+      <img src="images/team1.jpg" alt="陈熹微">
+    </a>
+
+    <a href="team-member2.html" class="poster-card" target="_blank">
+      <div class="poster-name">廖颜<br><span class="poster-role">品牌</span></div>
+      <img src="images/team2.jpg" alt="廖颜">
+    </a>
+
+    <a href="team-member3.html" class="poster-card" target="_blank">
+      <div class="poster-name">邓松林<br><span class="poster-role">技师</span></div>
+      <img src="images/team3.jpg" alt="邓松林">
+    </a>
+
+    <a href="team-member5.html" class="poster-card" target="_blank">
+      <div class="poster-name">孟宇<br><span class="poster-role">技师</span></div>
+      <img src="images/team5.jpg" alt="孟宇">
+    </a>
+
+    <a href="team-member4.html" class="poster-card" target="_blank">
+      <div class="poster-name">肖云辉<br><span class="poster-role">技师</span></div>
+      <img src="images/team4.jpg" alt="肖云辉">
+    </a>
+
+    <a href="team-member5.html" class="poster-card" target="_blank">
+      <div class="poster-name">贾深普<br><span class="poster-role">技师</span></div>
+      <img src="images/team6.jpg" alt="贾深普">
+    </a>
+
+    </div>
+    <button class="poster-nav next" aria-label="下一组">›</button>
+  </div>
+
+</section>
+
+<!-- 案例展示 -->
+<section id="cases" class="section dark">
+  <h2 class="section-title">案例分享</h2>
+
+  <div class="cases-showcase">
+    <div class="showcase-image" id="showcaseImage" style="background-image:url('images/case1.jpg')" aria-hidden="true"></div>
+
+    <div class="showcase-info">
+      <div class="showcase-top">
+        <div class="counter"><span id="caseIndex">01</span> / <span id="caseTotal">03</span></div>
+        <div class="nav-arrows">
+          <button class="cases-arrow prev" aria-label="上一页">‹</button>
+          <button class="cases-arrow next" aria-label="下一页">›</button>
+        </div>
+      </div>
+
+      <h3 id="caseTitle">XADV 改装案例</h3>
+      <p id="caseDesc">11111</p>
+
+      <a id="caseLink" class="btn-dark" href="case1.html">查看详情</a>
+    </div>
+  </div>
+
+  <div class="cases-dots" aria-hidden="true" style="display:none">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+</section>
+
+
+<!-- 车主空间 -->
+<section id="owners" class="section">
+  <h2>车主空间</h2>
+  <p class="intro">
+    这里记录的是车主视角下的真实使用、维护与反馈内容，
+    由我们整理并征得车主同意后发布。
+  </p>
+  <div class="content">
+    <div class="owner-story">
+      <p>
+        “第一次来三娃的时候，我并不知道哪些项目是必须的，
+        但他们把每一步都解释得很清楚。”
+      </p>
+      <span>—— 本田车主</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 3W MotoService · 成都</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
